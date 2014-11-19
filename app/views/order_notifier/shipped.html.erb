@@ -1,0 +1,10 @@
+<h1>OrderNotifier#shipped</h1>
+
+<p>
+ Это сообщение уведомляет Вас, что мы отправили ваш недавний заказ: 
+ </p>
+
+ <table>
+  <tr><th colspan='2'>к-во</th><th>описание</th></tr>
+  <%= render @order.line_items -%>
+ </table>
