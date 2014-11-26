@@ -1,7 +1,7 @@
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 
-server '46.48.230.44', port: 7171, roles: [:web, :app, :db], primary: true
+server '46.48.230.44', port: 1985, roles: [:web, :app, :db], primary: true
 
 set :application, 'depot'
 set :repo_url, 'git@example.com:debianserver/depot.git'
