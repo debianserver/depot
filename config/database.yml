@@ -87,5 +87,4 @@ test:
 production:
   <<: *default
   database: depot_production
-  username: develop
-  password: develop
+
