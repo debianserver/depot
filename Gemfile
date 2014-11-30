@@ -38,6 +38,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+<<<<<<< HEAD
 group :development do
   gem 'capistrano-rvm', require: false
   gem 'capistrano-rails', require: false
@@ -45,3 +46,13 @@ group :development do
   gem 'capistrano3-puma', require: false
   gem 'capistrano', require: false
 end
+=======
+
+group :development do
+	gem 'capistrano', require: false
+	gem 'capistrano-rvm', require: false
+	gem 'capistrano-rails', require: false
+	gem 'capistrano-bundler', require: false
+	gem 'capistrano3-puma', require: false
+end 
+>>>>>>> 694db73acafaee7c3d5f9232f01ac63d41b5c663
