@@ -74,7 +74,7 @@ class LineItemsController < ApplicationController
     
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to store_url, notice: 'Line item updated.' }
+        format.html { redirect_to store_path, notice: 'Line item updated.' }
         format.js { @current_item = @line_item }
         format.json { head :ok }
       else
@@ -92,7 +92,7 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save 
-        format.html { redirect_to store_path, notice: 'Line item updated.' }
+        format.html { redirect_to store_url, notice: 'Line item updated.' }
         format.js { @current_item = @line_item }
         format.json { head :ok }
       else

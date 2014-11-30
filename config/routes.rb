@@ -1,12 +1,28 @@
 Rails.application.routes.draw do
-  resources :orders
+  get 'admin' => 'admin#index'
 
-  resources :line_items do
-    put 'decrease', on: :member
-    put 'increase', on: :member
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
   end
 
-  resources :carts
+  get "sessions/create"
+  get "sessions/destroy"
+
+  scope '(:locale)' do
+
+    resources :orders
+
+    resources :line_items do
+      put 'decrease', on: :member
+      put 'increase', on: :member
+    end
+
+    resources :carts
+    # root 'welcome#index'
+    root 'store#index', as: 'store', via: :all
+  end
 
   get 'store/index'
 
@@ -17,7 +33,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root 'store#index', as: 'store'
+  # root 'store#index', as: 'store'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
